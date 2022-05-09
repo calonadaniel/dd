@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MUPDefinition xsi:schemaLocation="http://schemas.dell.com/openmanage/cm/2/0/mupdefinition.xsd mupdefinition.xsd" xmlns="http://schemas.dell.com/openmanage/cm/2/0/mupdefinition.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<packageinformation>
+		<installertype>custom</installertype>
+		<packagegrouping>single_package</packagegrouping>
+		<packagingtype>zip</packagingtype>
+		<releasetype>APP</releasetype>
+		<name>WAVESUWP</name>
+		<version>2.0.119.0</version>
+		<mupspecificationversion>2.4.5</mupspecificationversion>
+		<supportedoperatingsystems>
+			<osidentifier name="Windows10" architecture="x64" />
+		</supportedoperatingsystems>
+		<content>
+			<Device componentID="106430">
+				<Image type="APP" version="2.0.119.0">
+					<file>73fdd6dba1514a7aa22bfb547c0ec41b.appxbundle</file>
+					<file>73fdd6dba1514a7aa22bfb547c0ec41b_License1.xml</file>
+					<file>InstallApp.bat</file>
+					<file>InstallApp.ps1</file>
+					<file>InstallApp_LTSC.ps1</file>
+					<file>Microsoft.NET.Native.Framework.1.7_1.7.27413.0_x64__8wekyb3d8bbwe.appx</file>
+					<file>Microsoft.NET.Native.Runtime.1.7_1.7.27422.0_x64__8wekyb3d8bbwe.appx</file>
+					<file>Microsoft.VCLibs.140.00_14.0.27810.0_x64__8wekyb3d8bbwe.appx</file>
+				</Image>
+			</Device>
+		</content>
+	</packageinformation>
+	<executable architecture="x64">
+		<executablename>InstallApp.bat</executablename>
+	</executable>	
+	<behaviors>
+		<behavior name="attended"/>
+		<behavior name="unattended"/>
+	</behaviors>
+	<parameters>
+		<parametermapping name="logfile"/>
+	</parameters>
+		<returncodes>
+		<returncodemapping name="SUCCESS">
+			<vendorreturncode>0</vendorreturncode>
+		</returncodemapping>
+		<returncodemapping name="ERROR">
+			<vendorreturncode>1</vendorreturncode>
+		</returncodemapping>
+		<returncodemapping name="REBOOT_REQUIRED">
+			<vendorreturncode>5</vendorreturncode>
+		</returncodemapping>
+	</returncodes>
+	<inventorymetadata>
+		<fullpackageidentifier>
+			<registrykeys>
+				<registrykey componentID="106430">
+					<name>HKEY_LOCAL_MACHINE\SOFTWARE\Dell\WavesUWP\Product_Version</name>
+					<value>2.0.119.0</value>
+					<displayName>HKEY_LOCAL_MACHINE\SOFTWARE\Dell\WavesUWP\Product_Name</displayName>
+					<displayValue>Dell Waves UWP</displayValue>
+				</registrykey>
+			</registrykeys>
+		</fullpackageidentifier>
+	</inventorymetadata>
+</MUPDefinition>
